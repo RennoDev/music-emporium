@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Configuração de projeto padrão */
 html, body {
   height: 100%;
 }
@@ -11,4 +12,9 @@ body {
  display: flex;
  justify-content: center;
  align-items: center;
+}
+
+/* Mostrar em qual página da navbar você está */
+.active {
+  color: #F9963A;
 }

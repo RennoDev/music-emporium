@@ -7,6 +7,8 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    // Linha para fazer os componentes do Material TailwindCSS funcionarem
+    './**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}'
   ],
   prefix: "",
   theme: {
@@ -20,8 +22,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#F9963A",
-        background: "#0F0F0F",
-        containerBg: "#2A2A2A",
+        myBlack: "#0F0F0F",
+        myGray: "#2A2A2A",
         input: "#3f3f3f",
       },
       keyframes: {
@@ -40,5 +42,29 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+    function ({addUtilities}) {
+      const newUtilities = {
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgb(249, 150, 58) white"
+        },
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar": {
+            width: "8px"
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "white"
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "rgb(31 41 55)",
+            borderRadius: "20px",
+            border: "1px solid white"
+          }
+        }
+      }
+
+      addUtilities(newUtilities, ["responsive", "hover"])
+      }
+  ],
 }

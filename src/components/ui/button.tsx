@@ -9,23 +9,21 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-background text-primary hover:bg-primary hover:text-background",
+        default: "bg-myBlack text-primary hover:bg-primary hover:text-myBlack",
         primary:
-          "bg-primary text-background border boder-primary hover:bg-containerBg hover:text-primary hover:border border-primary",
+          "bg-primary text-myBlack border boder-primary hover:bg-myGray hover:text-primary hover:border border-primary",
         destructive:
           "bg-red-500 text-zinc-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-zinc-50 dark:hover:bg-red-900/90",
         outline:
-          "border border-primary bg-containerBg text-primary hover:bg-primary hover:text-background hover:border-primary dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
-        secondary:
-          "bg-background text-primary hover:bg-primary hover:text-white",
+          "border border-primary bg-myGray text-primary hover:bg-primary hover:text-myBlack hover:border-primary dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
+        secondary: "bg-myBlack text-primary hover:bg-primary hover:text-white",
         ghost:
           "hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        sm: "h-8 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
       },

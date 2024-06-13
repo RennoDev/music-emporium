@@ -5,7 +5,7 @@ export function Navbar() {
   return (
     <div>
       <div className="flex justify-center">
-        <nav className="flex justify-center items-center gap-x-6 px-5 py-2 border rounded-full border-containerBg bg-containerBg shadow-[rgba(255,255,255,0.13)] shadow-inner">
+        <nav className="flex justify-center items-center gap-x-6 px-5 py-2 border rounded-full border-myGray bg-myGray shadow-[rgba(255,255,255,0.13)] shadow-inner">
           <NavLink
             to="/"
             className="flex flex-col items-center text-white hover:text-primary/80"
@@ -45,7 +45,9 @@ export function Navbar() {
         </nav>
       </div>
       {/* Tag para separar o conteúdo persistente do variável */}
-      <Outlet />
+      <div className="flex justify-center">
+        <Outlet />
+      </div>
     </div>
   );
 }

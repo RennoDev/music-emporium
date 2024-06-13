@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 /* Configuração de projeto padrão */
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
- @apply bg-background;
- display: flex;
- justify-content: center;
- align-items: center;
+  @apply bg-myBlack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mostrar em qual página da navbar você está */
 .active {
-  color: #F9963A;
+  color: #f9963a;
 }

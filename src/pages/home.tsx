@@ -11,30 +11,16 @@ export function Home() {
       <Container>
         <div className="">
           <h1 className="text-2xl text-primary">Destaques da Emporium</h1>
-          <div className="w-full flex gap-2 mt-2 overflow-auto overscroll-auto scrollbar-thin scrollbar-webkit">
+          <div className="w-full flex gap-2 mt-2 justify-start overflow-auto overscroll-auto scrollbar-thin scrollbar-webkit">
             <CarouselMaterialTCSS>
-              <div className="flex gap-2">
-                <HighlightCard />
-              </div>
-              <div className="flex gap-2">
-                <HighlightCard />
-              </div>
               <div className="flex gap-2">
                 <HighlightCard />
               </div>
             </CarouselMaterialTCSS>
           </div>
           <h1 className="text-2xl text-primary mt-2">Últimas ouvidas</h1>
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-2 mt-2 overflow-auto overscroll-auto scrollbar-thin scrollbar-webkit">
             <CarouselMaterialTCSS>
-              <div className="flex flex-col gap-2">
-                <LastListenedCard />
-                <LastListenedCard />
-              </div>
-              <div className="flex flex-col gap-2">
-                <LastListenedCard />
-                <LastListenedCard />
-              </div>
               <div className="flex flex-col gap-2">
                 <LastListenedCard />
                 <LastListenedCard />
@@ -44,17 +30,8 @@ export function Home() {
           <h1 className="text-2xl text-primary mt-2">
             Estilos para você conhecer!
           </h1>
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-2 mt-2 overflow-auto overscroll-auto scrollbar-thin scrollbar-webkit">
             <CarouselMaterialTCSS>
-              <div className="flex gap-2">
-                <MusicTypeCard />
-              </div>
-              <div className="flex gap-2">
-                <MusicTypeCard />
-              </div>
-              <div className="flex gap-2">
-                <MusicTypeCard />
-              </div>
               <div className="flex gap-2">
                 <MusicTypeCard />
               </div>

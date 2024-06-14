@@ -3,19 +3,22 @@ export type slideRef = React.Ref<HTMLDivElement>;
 
 interface CarouselProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 export function CarouselMaterialTCSS({ children }: CarouselProps) {
   return (
     <Carousel
-      className="rounded-xl"
+      className="rounded-xl overflow-x-auto md:overflow-hidden"
+      autoplayDelay={300}
+      loop
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="filled"
           color="orange"
           size="md"
           onClick={handlePrev}
-          className="!absolute top-1/2 left-0 -translate-y-3/4"
+          className="!absolute top-1/2 left-0 -translate-y-3/4 hidden md:flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +42,7 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
           color="orange"
           size="md"
           onClick={handleNext}
-          className="!absolute top-1/2 !right-0 -translate-y-3/4"
+          className="!absolute top-1/2 !right-0 -translate-y-3/4 hidden md:flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +61,7 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
         </IconButton>
       )}
       navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+        <div className="absolute bottom-4 left-2/4 z-50 -translate-x-2/4 gap-2 hidden md:flex">
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
@@ -71,8 +74,9 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
         </div>
       )}
     >
-      <div className="flex gap-2 mb-8 justify-center">{children}</div>
-      <div className="flex gap-2 mb-8 justify-center">{children}</div>
+      <div className="flex gap-2 mb-8 justify-start md:justify-center">
+        {children}
+      </div>
     </Carousel>
   );
 }

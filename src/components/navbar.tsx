@@ -1,4 +1,4 @@
-import { Home, ListMusic, TrendingUp, User } from "lucide-react";
+import { Bolt, Home, ListMusic, TrendingUp } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export function Navbar() {
@@ -11,7 +11,7 @@ export function Navbar() {
             className="flex flex-col items-center text-white hover:text-primary/80"
           >
             <Home />
-            Home
+            Início
           </NavLink>
           <NavLink
             to="/playlist"
@@ -25,14 +25,14 @@ export function Navbar() {
             className="flex flex-col items-center text-white hover:text-primary/80"
           >
             <TrendingUp />
-            Trending
+            Em Alta
           </NavLink>
           <NavLink
-            to="/profile"
+            to="/options"
             className="flex flex-col items-center text-white hover:text-primary/80"
           >
-            <User />
-            Profile
+            <Bolt />
+            Opções
           </NavLink>
           {/* <NavLink
           to=""

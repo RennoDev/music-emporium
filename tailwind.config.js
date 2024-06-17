@@ -25,6 +25,7 @@ module.exports = {
         myBlack: "#0F0F0F",
         myGray: "#2A2A2A",
         input: "#3f3f3f",
+        danger: "#d90202",
       },
       keyframes: {
         "accordion-down": {

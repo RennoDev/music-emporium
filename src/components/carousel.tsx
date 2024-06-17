@@ -10,13 +10,12 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
   return (
     <Carousel
       className="rounded-xl overflow-x-auto md:overflow-hidden"
-      autoplayDelay={300}
-      loop
-      prevArrow={({ handlePrev }) => (
+      prevArrow={({ handlePrev, firstIndex }) => (
         <IconButton
           variant="filled"
           color="orange"
           size="md"
+          disabled={firstIndex}
           onClick={handlePrev}
           className="!absolute top-1/2 left-0 -translate-y-3/4 hidden md:flex"
         >
@@ -36,11 +35,12 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
           </svg>
         </IconButton>
       )}
-      nextArrow={({ handleNext }) => (
+      nextArrow={({ handleNext, lastIndex }) => (
         <IconButton
           variant="filled"
           color="orange"
           size="md"
+          disabled={lastIndex}
           onClick={handleNext}
           className="!absolute top-1/2 !right-0 -translate-y-3/4 hidden md:flex"
         >
@@ -74,6 +74,9 @@ export function CarouselMaterialTCSS({ children }: CarouselProps) {
         </div>
       )}
     >
+      <div className="flex gap-2 mb-8 justify-start md:justify-center">
+        {children}
+      </div>
       <div className="flex gap-2 mb-8 justify-start md:justify-center">
         {children}
       </div>

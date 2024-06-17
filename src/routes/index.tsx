@@ -2,7 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Login } from "@/pages/login";
 import { NotFound } from "@/pages/notFound";
 import { Playlist } from "@/pages/playlist";
-import { Profile } from "@/pages/profile";
+import { Options } from "@/pages/options";
 import { Register } from "@/pages/register";
 import { Trending } from "@/pages/trending";
 import { Home } from "@/pages/home";
@@ -16,7 +16,7 @@ export default function CustomRoutes() {
         <Route index element={<Home />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/trending" element={<Trending />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/options" element={<Options />} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

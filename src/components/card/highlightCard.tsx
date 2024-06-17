@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import musicImg from "../assets/img/albumcover.png";
-import { Button } from "./ui/button";
+import musicImg from "../../assets/img/albumcover.png";
+import { Button } from "../ui/button";
 
 export function HighlightCard() {
   return (
@@ -15,7 +15,7 @@ export function HighlightCard() {
             Álbum
           </Link>
           <Link to={"artist"} className="text-sm  hover:text-primary">
-            Nome do(a) artista
+            Artista
           </Link>
         </div>
         <div className="flex mt-2 gap-x-2">

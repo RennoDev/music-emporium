@@ -1,3 +1,4 @@
+import { Canvas } from "@/components/canvas";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,8 +9,8 @@ export function Login() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-[1280px] max-h-[832px] flex justify-center items-center flex-col">
-      <Container>
+    <Canvas>
+      <Container className="md:w-1/2 h-auto items-center justify-center">
         <h1 className="text-primary pb-4 text-2xl">Music Emporium</h1>
         <div className="flex flex-col gap-2 justify-center">
           <div>
@@ -35,6 +36,6 @@ export function Login() {
           </div>
         </div>
       </Container>
-    </div>
+    </Canvas>
   );
 }

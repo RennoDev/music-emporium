@@ -12,10 +12,10 @@ export function MostViewedMusicCard() {
         />
         <div className="flex flex-col">
           <p className="text-base md:text-lg">Nome da música</p>
-          <Link to={"album"} className="text-xs mt-2  hover:text-primary">
+          <Link to={"/album"} className="text-xs mt-2  hover:text-primary">
             Álbum
           </Link>
-          <Link to={"artist"} className="text-sm  hover:text-primary">
+          <Link to={"/artist"} className="text-sm  hover:text-primary">
             Artista
           </Link>
         </div>

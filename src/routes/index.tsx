@@ -7,6 +7,8 @@ import { Register } from "@/pages/register";
 import { Trending } from "@/pages/trending";
 import { Home } from "@/pages/home";
 import { Route, Routes } from "react-router-dom";
+import { Artist } from "@/pages/artist";
+import { Album } from "@/pages/album";
 
 export default function CustomRoutes() {
   return (
@@ -17,6 +19,8 @@ export default function CustomRoutes() {
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/trending" element={<Trending />} />
         <Route path="/options" element={<Options />} />
+        <Route path="/artist" element={<Artist />} />
+        <Route path="/album" element={<Album />} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

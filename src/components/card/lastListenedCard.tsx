@@ -10,11 +10,11 @@ export function LastListenedCard() {
         <div className="flex flex-col">
           <p className="text-base">Nome da música</p>
           <div className="flex md:flex-col gap-1 md:gap-0 md:mt-2">
-            <Link to={"album"} className="text-xs hover:text-primary">
+            <Link to={"/album"} className="text-xs hover:text-primary">
               Álbum
             </Link>
             <p className="md:hidden">*</p>
-            <Link to={"artist"} className="text-xs hover:text-primary">
+            <Link to={"/artist"} className="text-xs hover:text-primary">
               Artista
             </Link>
           </div>

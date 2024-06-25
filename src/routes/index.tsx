@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import { Navbar } from "@/components/navbar";
 import { Login } from "@/pages/login";
 import { NotFound } from "@/pages/notFound";
@@ -6,7 +7,6 @@ import { Options } from "@/pages/options";
 import { Register } from "@/pages/register";
 import { Trending } from "@/pages/trending";
 import { Home } from "@/pages/home";
-import { Route, Routes } from "react-router-dom";
 import { Artist } from "@/pages/artist";
 import { Album } from "@/pages/album";
 
